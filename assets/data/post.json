@@ -1,0 +1,66 @@
+[
+    {
+        "id": 1,
+        "title": "Mastering JavaScript Closures",
+        "description": "Understand how closures work and why they are powerful in JavaScript.",
+        "content": "Closures are a fundamental concept in JavaScript that allow functions to access variables from an enclosing scope...",
+        "category": "Tech & Coding",
+        "image": "assets/images/programming-1873854_1280.png"
+    },
+    {
+        "id": 2,
+        "title": "Optimizing React Performance",
+        "description": "Boost your React apps with these key performance optimization techniques.",
+        "content": "Performance in React can be improved through code splitting, memoization, lazy loading, and optimizing re-renders...",
+        "category": "Tech & Coding",
+        "image": "assets/images/dream-setup-pc.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Demystifying APIs: REST vs. GraphQL",
+        "description": "Learn the key differences between REST and GraphQL and when to use each.",
+        "content": "REST APIs rely on structured endpoints, while GraphQL provides flexibility by allowing clients to query exactly what they need...",
+        "category": "Tech & Coding",
+        "image": "assets/images/network-3664108_1280.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Understanding Smart Contracts",
+        "description": "A beginner-friendly guide to writing and deploying smart contracts.",
+        "content": "Smart contracts are self-executing agreements written in code, primarily on blockchain networks like Ethereum...",
+        "category": "Blockchain/Web3",
+        "image": "assets/images/ethereum-6286124_1280.jpg"
+    },
+    {
+        "id": 5,
+        "title": "What is DeFi and Why Does It Matter?",
+        "description": "An introduction to decentralized finance and how it is revolutionizing banking.",
+        "content": "DeFi removes the need for traditional financial intermediaries by using blockchain-based smart contracts...",
+        "category": "Blockchain/Web3",
+        "image": "assets/images/blur-1853262_1280.jpg"
+    },
+    {
+        "id": 6,
+        "title": "The Future of NFTs Beyond Art",
+        "description": "NFTs are more than digital art—explore real-world applications.",
+        "content": "While NFTs started as digital collectibles, they now have use cases in gaming, real estate, identity verification...",
+        "category": "Blockchain/Web3",
+        "image": "assets/images/code-5290465_1280.jpg"
+    },
+    {
+        "id": 7,
+        "title": "Atomic Habits: Key Lessons for Developers",
+        "description": "Applying Atomic Habits principles to improve coding consistency.",
+        "content": "James Clear's 'Atomic Habits' emphasizes the power of small, consistent actions...",
+        "category": "Productivity & Mindset",
+        "image": "assets/images/atomic-habits.jpg"
+    },
+    {
+        "id": 8,
+        "title": "Deep Work: How to Stay Focused in a Distracted World",
+        "description": "Learn Cal Newport's Deep Work strategies to maximize productivity.",
+        "content": "Deep Work is a state of focused, distraction-free concentration that leads to high productivity...",
+        "category": "Productivity & Mindset",
+        "image": "assets/images/blur-1853262_1280.jpg"
+    }
+]
