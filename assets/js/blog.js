@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const postContainer = document.getElementById("posts-container");
+    const postsContainer = document.getElementById("posts-container");
     const categoryButtons = document.querySelectorAll("#category-filters button");
 
     // Fetch blog posts
@@ -26,7 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to display posts 
 function displayPosts(posts) {
-    postsContainer.innerHTML = ""; // Clear previous post 
+
+    postsContainer.innerHTML = ""; // Properly clear previous post
 
     posts.forEach(post => {
         const article = document.createElement("article");
