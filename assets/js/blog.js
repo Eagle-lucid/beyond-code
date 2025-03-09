@@ -17,11 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (category === "All") {
                         displayPosts(allPosts); // Reset to original full post
                     } else {
-<<<<<<< Updated upstream
-                        const filteredPosts = posts.filter(post => post.category === category);
-=======
                         const filteredPosts = allPosts.filter(post => post.category.toLowerCase() === category.toLowerCase());
->>>>>>> Stashed changes
                         displayPosts(filteredPosts);
                     }
                 });
