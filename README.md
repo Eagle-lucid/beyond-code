@@ -7,10 +7,11 @@ Beyond Code is a **hybrid blog project** designed to showcase insights on **Tech
 ## 🚀 Features
 
 - **Dark/Light Mode Toggle** 🌗
-- **Dynamic Blog Post Loading** (from `posts.json`)
+- **Live blog post updates** (fetched from `posts.json`).
 - **Interactive Sidebar** with Categories, Recent Posts & Quote of the Day
 - **Smooth Scrolling Navigation**
 - **Modals for Full Blog Post View**
+- **Auto-Updating Footer** (Year & Social Links)
 
 ## 🛠 Tech Stack
 
@@ -51,10 +52,20 @@ Beyond Code is a **hybrid blog project** designed to showcase insights on **Tech
 - **User Authentication** (for personalized experience)
 - **Full CRUD functionality** (create, update, delete blog posts)
 - **Backend Integration** (Node.js, Firebase, or a headless CMS)
+- \*\*Commenting System (to allow discussions on blog posts)
 
 ## 📬 Connect with Me
 
 - **GitHub:** [Eagle-lucid](https://github.com/Eagle-lucid/)
 - **LinkedIn:** [Victor Okefie](https://www.linkedin.com/in/victor-okefie-9a333b26b/)
+
+---
+
+### **🔹 What’s Improved?**
+
+✅ **More engaging & structured** (feels like a pro-level open-source project).  
+✅ **Updated project structure** (reflects our actual folders).  
+✅ **Extra Section & Footer now included** (so new contributors/users understand).  
+✅ **Future enhancements refined** (so we have a roadmap).
 
 🚀 **Happy Coding!**
