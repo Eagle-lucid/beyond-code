@@ -1,20 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
     const categoryButtons = document.querySelectorAll("#category-filters button");
+    let allPosts = [];
 
     // Fetch blog posts
     fetch("assets/data/post.json")
         .then(response => response.json())
         .then(posts => {
+            allPosts = posts; // Stores all post globally
             displayPosts(posts); // show all posts by default
 
             // Add category filter event listeners
             categoryButtons.forEach(button => {
                 button.addEventListener("click", () => {
                     const category = button.getAttribute("data-category");
-                    if (category === "all") {
-                        displayPosts(posts);
+                    if (category === "All") {
+                        displayPosts(allPosts); // Reset to original full post
                     } else {
-                        const filteredPosts = posts.filter(post => post.category.toLowerCase() === category.toLowerCase());
+                        const filteredPosts = posts.filter(post => post.category === category);
                         displayPosts(filteredPosts);
                     }
                 });
@@ -32,6 +34,7 @@ function displayPosts(posts) {
         const article = document.createElement("article");
         article.classList.add("blog-post");
         article.innerHTML = `
+            <img src="${post.image}" alt="${post.title}" class="blog-image">
             <h3>${post.title}</h3>
             <p>${post.description}</p>
             <button class="read-more">Read More</button>
