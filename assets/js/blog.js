@@ -1,9 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const postsContainer = document.getElementById("posts-container");
     const categoryButtons = document.querySelectorAll("#category-filters button");
 
     // Fetch blog posts
-    fetch("posts.json")
+    fetch("assets/data/post.json")
         .then(response => response.json())
         .then(posts => {
             displayPosts(posts); // show all posts by default
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (category === "all") {
                         displayPosts(posts);
                     } else {
-                        const filteredPosts = posts.filter(post => post.category === category);
+                        const filteredPosts = posts.filter(post => post.category.toLowerCase() === category.toLowerCase());
                         displayPosts(filteredPosts);
                     }
                 });
@@ -26,7 +25,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // Function to display posts 
 function displayPosts(posts) {
-
+    const postsContainer = document.getElementById("posts-container");
     postsContainer.innerHTML = ""; // Properly clear previous post
 
     posts.forEach(post => {
