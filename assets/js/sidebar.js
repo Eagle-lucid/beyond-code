@@ -24,6 +24,13 @@ document.addEventListener("DOMContentLoaded", () => {
     // Dropdown logic
     dropdownButtons.forEach((btn) => {
         btn.addEventListener("click", () => {
+            // Close all dropdown except the one clicked 
+            document.querySelectorAll(".dropdown-content").forEach((content) => {
+                if (content !== btn.nextElementSibling) {
+                    content.classList.remove("show");
+                }
+            });
+            
             const dropdownContent = btn.nextElementSibling;
             dropdownContent.classList.toggle("show");
 
