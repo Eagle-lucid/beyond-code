@@ -5,15 +5,12 @@ document.addEventListener("DOMContentLoaded", () => {
     const closeIcon = document.getElementById("close-icon");
     const dropdownButtons = document.querySelectorAll(".dropdown-btn");
 
-    // Collapsed by default when the page loads 
-    sidebar.classList.add("collapsed");
-    closeIcon.style.display = "none"; // Hide close icon initially
+    // Set sidebar to be collapsed by default
+    closeSidebar();
 
     // Sidebar Toggle (Open/Close)
     toggleBtn.addEventListener("click", () => {
-        const isCollapsed = sidebar.classList.contains("collapsed");
-
-        if (isCollapsed) {
+        if (sidebar.classList.contains("collapsed")) {
             // Opening sidebar
             openSidebar()
         } else {
@@ -22,12 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
      // Close sidebar when clicking the close (X) icon
-     closeIcon.addEventListener("click", () => {
-        if (isCollapsed) {
-            // Close sidebar
-           closeSidebar()
-        }
-    });
+     closeIcon.addEventListener("click", closeSidebar);
+
     // Close sidebar when pressing Esc key
     document.addEventListener("keydown", (e) => {
         if (e.key === "Escape") {
@@ -38,13 +31,12 @@ document.addEventListener("DOMContentLoaded", () => {
       function openSidebar() {
         sidebar.classList.remove("collapsed");
         burgerIcon.style.display = "none"; // Hide burger icon
-        closeIcon.style.display = "block"; // Show cancel icon
+        updateIcons(false);
     }
     // Function to close sidebar and reset everything 
     function closeSidebar() {
         sidebar.classList.add("collapsed");
-        burgerIcon.style.display = "block";
-        closeIcon.style.display = "none";
+        updateIcons(true)
 
         // Close all dropdowns when sidebar is collapsed
         document.querySelectorAll(".dropdown-content").forEach((content) => {
@@ -55,6 +47,17 @@ document.addEventListener("DOMContentLoaded", () => {
          document.querySelectorAll(".dropdown-icon").forEach((icon) => {
             icon.src = "assets/icons/chevron-down-solid.svg";
         });
+    }
+
+    // Function to Update Sidebar Icons 
+    function updateIcons(isCollapsed) {
+        if (isCollapsed) {
+            burgerIcon.style.display = "block";
+            closeIcon.style.display = "none";
+        } else {
+            burgerIcon.style.display = "none"; 
+            closeIcon.style.display = "block"; 
+        }
     }
     // Dropdown logic
     dropdownButtons.forEach((btn) => {
