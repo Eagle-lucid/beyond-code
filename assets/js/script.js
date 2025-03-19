@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", () => {
     // Smooth scrolling for Navigation
+    const navLinks = document.querySelectorAll(".nav-list a");
 
-    document.querySelectorAll('nav a').forEach(link => {
-        link.addEventListener("click", (e) => {
-            e.preventDefault();
+    navLinks.forEach(link => {
+        link.addEventListener("click", function (e) {
+              e.preventDefault()// Prevent default anchor behavior
+
+              // Remove active class from all links 
+
+            navLinks.forEach(nav => nav.classList.remove("active"));
+
+            // Add active class to clicked links 
+            this.classList.add("active"); 
+
+            // Smooth Scroll
             const targetId = link.getAttribute("href").substring(1);
             const targetSection = document.getElementById(targetId);
             if (targetSection) {
@@ -12,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             };
         });
     });
+            
     // Smooth Scrolling for "Explore More" Button
     document.getElementById("explore-btn").addEventListener("click", () => {
         document.getElementById("blog").scrollIntoView({behavior: "smooth" });
