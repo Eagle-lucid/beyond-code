@@ -1,0 +1,64 @@
+/* Import Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');
+
+/*  Universal Reset */
+*::before, *::after, * {
+    padding: 0;
+    margin: 0;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/*  Root Variables */
+:root {
+    /*  Fonts */
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-special: 'EB Garamond', serif;
+    --font-btn: 'Space Grotesk', sans-serif;
+
+    /*  Font Sizes */
+    --base-font: 1rem;
+    --header-font:1.75rem;
+    --subheader-font: 1.3rem;
+    --small-font: 0.9rem;
+
+    /*  Light Mode Colors */
+    --bg-primary: #FBFFE4; /* Subtle Cream */
+    --bg-secondary: #B3D8A8; /* Soft Green */
+    --bg-accent: #3D8D7A; /* Deep Teal */
+    --bg-dark: #27391C; /* Rich Dark Green */
+
+    /*  Border Colors */
+    --border-light: #D1D5DB;
+    --border-dark: #4B5563;
+
+    /*  Text Colors */
+    --text-primary: #18230F; /* Deep Forest Green */
+    --text-secondary: #255F38; /* Balanced Green */
+    --text-light: #FFFFFF; /* Pure White */
+
+    /*  Spacing */
+    --spacing-xs: 0.5rem;  
+    --spacing-sm: 1rem;    
+    --spacing-md: 1.5rem;  
+    --spacing-lg: 2rem;    
+    --spacing-xl: 3rem;   
+
+    /*  Radius (Rounded Corners) */
+    --radius-sm: 4px;     
+    --radius-md: 8px;     
+    --radius-lg: 16px;    
+
+    /*  Shadows */
+    --shadow-light: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    --shadow-medium: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    --shadow-dark: 0px 6px 15px rgba(0, 0, 0, 0.3);
+
+    /*  Transitions */
+    --transition-fast: 0.2s ease-in-out;
+    --transition-medium: 0.4s ease-in-out;
+    --transition-slow: 0.6s ease-in-out;
+}
