@@ -62,9 +62,6 @@
     --transition-medium: 0.4s ease-in-out;
     --transition-slow: 0.6s ease-in-out;
 }
-/* ===========================
-   ADVANCED HYBRID HEADER
-=========================== */
 header {
     position: fixed;
     top: 0;
@@ -89,7 +86,7 @@ header {
     align-items: center;
     gap: var(--spacing-xs);
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: -1px;
     cursor: pointer;
 }
 
