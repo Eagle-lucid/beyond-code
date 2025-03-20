@@ -1,0 +1,86 @@
+/* Sidebar Styles */
+#sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: var(--bg-secondary);
+    display: flex;
+    flex-direction: column;
+    padding: var(--spacing-sm);
+    box-shadow: var(--shadow-medium);
+    transition: transform var(--transition-medium);
+}
+
+/* Collapsed Sidebar */
+#sidebar.collapsed {
+    width: 70px;
+    overflow: hidden;
+}
+
+/* Sidebar Toggle Button */
+#sidebar-toggle {
+    background: none;
+    cursor: pointer;
+    padding: var(--spacing-xs);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#burger-icon, #close-icon {
+    width: 24px;
+    height: 24px;
+    transition: var(--transition-fast);
+}
+
+/* Profile Section */
+.sidebar-section.profile {
+    text-align: center;
+    margin-bottom: var(--spacing-md);
+}
+
+.sidebar-section.profile h3 {
+    font-size: var(--subheader-font);
+    color: var(--text-primary);
+}
+
+/* Dropdown Sections */
+.sidebar-section {
+    margin-bottom: var(--spacing-sm);
+}
+
+.dropdown-btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    background: none;
+    font-size: var(--base-font);
+    font-weight: 500;
+    color: var(--text-primary);
+    padding: var(--spacing-xs);
+    cursor: pointer;
+    transition: var(--transition-fast);
+}
+
+.dropdown-content {
+    display: none;
+    padding-left: var(--spacing-sm);
+}
+
+.dropdown-content.show {
+    display: block;
+}
+
+/* Sidebar Animation */
+#sidebar.collapsed .sidebar-section h3,
+#sidebar.collapsed .sidebar-section p,
+#sidebar.collapsed .dropdown-btn {
+    opacity: 0;
+    transition: opacity var(--transition-fast);
+}
+
+#sidebar.collapsed .dropdown-content {
+    display: none;
+}
