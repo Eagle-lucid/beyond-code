@@ -61,8 +61,24 @@
     --transition-fast: 0.2s ease-in-out;
     --transition-medium: 0.4s ease-in-out;
     --transition-slow: 0.6s ease-in-out;
+
+    /* Header Height */
+    --header-height: 70px; /* Adjust based on design preference */
+}
+/* Grid Structure for Body*/
+body {
+    display: grid;
+    grid-template-columns: 250px auto;
+    grid-template-rows: var(--header-height) 1fr auto;
+    grid-template-areas: 
+    "header header"
+    "sidebar main"
+    "footer footer";
+    min-height: 100vh;
 }
 header {
+    grid-area: header;
+    height: var(--header-height);
     position: fixed;
     top: 0;
     left: 0;
@@ -166,4 +182,130 @@ header::after {
     height: 2px;
     background: linear-gradient(90deg, var(--bg-accent), var(--bg-dark));
     opacity: 0.8;
+}
+/* Sidebar */
+#sidebar {
+    grid-area: sidebar;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg-secondary);
+    height: calc(100vh - var(--header-height));
+    padding-top: var(--spacing-md);
+    overflow-y: auto;
+    transition: width var(--transition-medium), transform var(--transition-fast);
+}
+#sidebar.collapsed {
+    width: 50px;
+    overflow: hidden;
+    background: var(--bg-dark);
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    transition: width var(--transition-medium), background var(--transition-fast);
+}
+#sidebar #sidebar-toggle {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: auto;
+    margin-bottom: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background var(--transition-fast), transform var(--transition-fast);
+}
+#sidebar #sidebar-toggle img {
+    width: 25px;
+    object-fit: contain;
+    transition: transform var(--transition-fast) opacity var(--transition-fast);
+}
+#sidebar.collapsed #sidebar-toggle {
+   width: 70%;
+   height: 40px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: none;
+   background: rgba(255, 255, 255, 0.5);
+   border-radius: 50%;
+   cursor: pointer;
+   margin-right: 5px;
+   padding: var(--spacing-xs);
+   transition: background var(--transition-fast), transform var(--transition-fast);
+}
+#sidebar.collapsed #sidebar-toggle:hover {
+    transform: rotate(360deg);
+    background: rgba(255, 255, 255, 0.15);
+}
+#sidebar.collapsed #sidebar-toggle img {
+    width: 20px;
+    object-fit: contain;
+}
+#sidebar.collapsed .drop-con {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    height: 100%;
+    padding: var(--spacing-sm);
+}
+#sidebar.collapsed .drop-con .sidebar-section .drop-icon {
+    width: 24px;
+    object-fit: contain;
+    transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+#sidebar.collapsed .drop-con .sidebar-section .drop-icon:hover {
+    transform: scale(1.1) rotate(8deg);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.9));
+    transition: transform 0.2s ease-in-out, filter 0.2s ease-in-out;
+}
+#sidebar.collapsed .drop-con .top-icons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#sidebar.collapsed .drop-con .bottom-icons {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+#sidebar.collapsed .sidebar-section span,
+#sidebar.collapsed .sidebar-section blockquote,
+#sidebar.collapsed .sidebar-section .dropdown-content {
+    display: none;
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-fast), opacity var(--transition-fast);
+}
+.sidebar-section .dropdown-content {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out, opacity 0.3s ease-in-out;
+}
+.sidebar-section .dropdown-content.show {
+    max-height: 200px; /* Adjust as needed */
+    opacity: 1;
+}
+#sidebar.collapsed .sidebar-section .dropdown-btn {
+    border: none;
+    background: transparent;
+}
+#sidebar.collapsed .sidebar-section .dropdown-btn .dropdown-icon {
+    display: none;
+}
+/* Main Content (Hero, Blog, Add Section) */
+main {
+    grid-area: main;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
 }
