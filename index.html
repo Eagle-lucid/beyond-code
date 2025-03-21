@@ -31,51 +31,57 @@
             <img id="burger-icon" src="assets/icons/bars-staggered-solid.svg" alt="Open Sidebar">
             <img id="close-icon" src="assets/icons/xmark.svg" alt="Close Sidebar">
         </button>
-
-        <section class="sidebar-section">
-            <img src="assets/icons/circle-user.svg" alt="User icon"> 
-            <span>Victor Okefie</span>
-            <span>Frontend Developer | Web3 Enthusiast</span>
-        </section>
-        <!-- Categories with Dropdown -->
-        <section class="sidebar-section">
-            <button class="dropdown-btn">
-                <img src="assets/icons/layer.svg" alt="Categories Icon"> 
-                <span>Categories</span>
-                <img class="dropdown-icon" src="assets/icons/chevron-down-solid.svg" alt="Dropdown Icon" class="dropdown-icon">
-            </button>
+      <!-- Container for the whole section -->
+       <div class="drop-con">
+        <div class="top-icons">
+            <section class="sidebar-section">
+                <img class="drop-icon" src="assets/icons/circle-user.svg" alt="User icon"> 
+                <span>Victor Okefie</span>
+                <span>Frontend Developer | Web3 Enthusiast</span>
+            </section>
+            <!-- Categories with Dropdown -->
+            <section class="sidebar-section">
+                <button class="dropdown-btn">
+                    <img class="drop-icon" src="assets/icons/layer.svg" alt="Categories Icon"> 
+                    <span>Categories</span>
+                    <img class="dropdown-icon" src="assets/icons/chevron-down-solid.svg" alt="Dropdown Icon" class="dropdown-icon">
+                </button>
+                    <ul class="dropdown-content">
+                        <li><img src="assets/icons/laptop.png" alt="Laptop icon">Tech & Coding</li>
+                        <li><img src="assets/icons/web3.png" alt="Web3 Icon">Blockchain/Web3</li>
+                        <li><img src="assets/icons/productivity.png" alt="Productivity icon">Productivity & Mindset</li>
+                    </ul>
+            </section>
+            <!-- Recent posts -->
+            <section class="sidebar-section">
+                <button class="dropdown-btn">
+                    <img class="drop-icon" src="assets/icons/comment-solid.svg" alt="Recent Posts icons"> 
+                    <span>Recent Posts</span>
+                    <img class="dropdown-icon" src="assets/icons/chevron-down-solid.svg" alt="Dropdown Icon" class="dropdown-icon">
+                </button>
                 <ul class="dropdown-content">
-                    <li><img src="assets/icons/laptop.png" alt="Laptop icon">Tech & Coding</li>
-                    <li><img src="assets/icons/web3.png" alt="Web3 Icon">Blockchain/Web3</li>
-                    <li><img src="assets/icons/productivity.png" alt="Productivity icon">Productivity & Mindset</li>
+                    <li>Stay tuned for the latest updates...</li>
+                    <li>New insights coming soon...</li>
+                    <li>Fresh content is on the way!</li>
                 </ul>
-        </section>
-        <!-- Recent posts -->
-        <section class="sidebar-section">
-            <button class="dropdown-btn">
-                <img src="assets/icons/comment-solid.svg" alt="Recent Posts icons"> 
-                <span>Recent Posts</span>
-                <img class="dropdown-icon" src="assets/icons/chevron-down-solid.svg" alt="Dropdown Icon" class="dropdown-icon">
-            </button>
-            <ul class="dropdown-content">
-                <li>Stay tuned for the latest updates...</li>
-                <li>New insights coming soon...</li>
-                <li>Fresh content is on the way!</li>
-            </ul>
-         
-        </section>
-        <!-- Projects Showcase -->
-        <section class="sidebar-section">
-            <img src="assets/icons/toolbox.svg" alt="Projects Icon">
+             
+            </section>
+        </div>
+       <div class="bottom-icons">
+         <!-- Projects Showcase -->
+         <section class="sidebar-section">
+            <img class="drop-icon" src="assets/icons/toolbox.svg" alt="Projects Icon">
             <span>My Projects</span>
             <span>Coming Soon ...</span>
         </section>
         <!-- Quote of the Day-->
         <section class="sidebar-section">
-            <img src="assets/icons/lightbulb-solid.svg" alt="Idea icon"> 
+            <img class="drop-icon" src="assets/icons/lightbulb-solid.svg" alt="Idea icon"> 
             <span>Quote of the Day</span>
             <blockquote>"Every line of code is a step towards mastery. Keep building."</blockquote>
         </section>
+       </div>
+       </div>
      </aside>
     <!-- Main Content - blog section -->
      <main id="blog">
