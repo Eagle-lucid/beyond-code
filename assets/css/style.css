@@ -387,6 +387,7 @@ header::after {
 }
 #sidebar .drop-con .sidebar-section:hover .dropdown-icon {
     opacity: 1;
+    margin-left: 2px;
     transform: translateY(0);
 }
 #sidebar .drop-con .sidebar-section .dropdown-content li {
@@ -415,6 +416,30 @@ header::after {
     transform: scale(1.1);
     box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.2);
 }
+#sidebar.collapsed .drop-con .sidebar-section .drop-title,
+#sidebar.collapsed .drop-con .sidebar-section .drop-btn-title,
+#sidebar.collapsed .drop-con .sidebar-section .drop-details,
+#sidebar.collapsed .drop-con .sidebar-section blockquote {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Ensure only icons remain visible when collapsed */
+#sidebar.collapsed .drop-con .sidebar-section .drop-icon {
+    display: block;
+    opacity: 1;
+    margin: auto;
+}
+
+/* Prevent background and padding from breaking layout when collapsed */
+#sidebar.collapsed .drop-con .sidebar-section {
+    background: none;
+    padding: 0;
+    margin: 0;
+    width: auto;
+}
+
 /* Main Content (Hero, Blog, Add Section) */
 main {
     grid-area: main;
