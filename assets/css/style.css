@@ -192,16 +192,12 @@ header::after {
     background: var(--bg-secondary);
     height: calc(100vh - var(--header-height));
     padding-top: var(--spacing-md);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
     overflow-y: auto;
     transition: width var(--transition-medium), transform var(--transition-fast);
 }
-#sidebar.collapsed {
-    width: 50px;
-    background: var(--bg-dark);
-    border-top-right-radius: 15px;
-    border-bottom-right-radius: 15px;
-    transition: width var(--transition-medium), background var(--transition-fast);
-}
+
 /* Sidebar Toggle */
 #sidebar #sidebar-toggle {
     width: 40px;
@@ -220,6 +216,11 @@ header::after {
     width: 25px;
     object-fit: contain;
     transition: transform var(--transition-fast) opacity var(--transition-fast);
+}
+#sidebar.collapsed {
+    width: 80px;
+    background: var(--bg-dark);
+    transition: width var(--transition-medium), background var(--transition-fast);
 }
 #sidebar.collapsed #sidebar-toggle {
    width: 70%;
@@ -305,18 +306,17 @@ header::after {
     position: relative;
 }
 #sidebar .drop-con .sidebar-section .tool-tip {
-    display: none;
     position: absolute;
-    top: 50%;
+    top: 14px;
+    left: calc(100% + 2px);
     opacity: 0;
-    visibility: hidden;
+    display: none;
+    white-space: nowrap;
     pointer-events: none;
     transform: translateY(-50%);
-    left: 100%;
     background-color: rgb(8, 111, 201);
     padding: 6px 12px;
     border-radius: 8px;
-    white-space: nowrap;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     transition: 0s;
 }
@@ -325,6 +325,9 @@ header::after {
     pointer-events: auto;
     transform:  translateY(-50%) translateX(5px);
     transition: 0.4s ease;
+}
+#sidebar.collapsed .drop-con .sidebar-section .tool-tip {
+    display: block;
 }
 #sidebar .drop-con .sidebar-section {
     display: flex;
